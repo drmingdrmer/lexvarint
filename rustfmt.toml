@@ -1,0 +1,4 @@
+max_width = 100
+chain_width = 100
+merge_derives = false
+newline_style = "Unix"

@@ -81,9 +81,7 @@ pub fn decode(encoded: &str) -> Result<u128, DecodeError> {
     let mut value = 0_u128;
     for (index, segment) in segments.enumerate() {
         let segment = parse_segment(segment, index + 1)?;
-        let product = value
-            .checked_mul(SEGMENT_RADIX)
-            .ok_or(DecodeError::Overflow)?;
+        let product = value.checked_mul(SEGMENT_RADIX).ok_or(DecodeError::Overflow)?;
         value = product.checked_add(segment).ok_or(DecodeError::Overflow)?;
     }
     Ok(value)

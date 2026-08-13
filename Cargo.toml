@@ -1,0 +1,13 @@
+[package]
+name = "lexvarint"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Length-prefixed, lexicographically ordered encoding for unsigned integers"
+license = "Apache-2.0"
+repository = "https://github.com/drmingdrmer/lexvarint"
+keywords = ["encoding", "integer", "lexicographic", "serialization"]
+categories = ["encoding"]
+
+[dependencies]
+thiserror = "2.0.20"
